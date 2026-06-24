@@ -166,7 +166,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="work-grid">
 
         <!-- North Dakota Residence -->
-        <div class="work-item group cursor-pointer">
+        <div class="work-item group cursor-pointer" onclick="openCarousel('north-dakota')">
           <div class="relative overflow-hidden aspect-[4/5] hover-lift">
             <img src="assets/project_pictures/2494 River_s Bend Dr E_015.jpg" alt="North Dakota Residence"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -181,7 +181,7 @@
         </div>
 
         <!-- Minneapolis Parkway Residence -->
-        <div class="work-item group cursor-pointer">
+        <div class="work-item group cursor-pointer" onclick="openCarousel('minneapolis-parkway')">
           <div class="relative overflow-hidden aspect-[4/5] hover-lift">
             <img src="assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_002.jpg" alt="Minneapolis Parkway Residence"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -197,7 +197,7 @@
         </div>
 
         <!-- Modern Family Residence -->
-        <div class="work-item group cursor-pointer">
+        <div class="work-item group cursor-pointer" onclick="openCarousel('modern-family')">
           <div class="relative overflow-hidden aspect-[4/5] hover-lift">
             <img src="assets/project_pictures/Abbott_Ave_S_001.jpg" alt="Modern Family Residence"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
@@ -460,6 +460,42 @@
   </footer>
 
 
+  <!-- Carousel Modal -->
+  <div id="carousel-modal" class="fixed inset-0 z-50 hidden" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeCarousel()"></div>
+    <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 py-8">
+
+      <!-- Header -->
+      <div class="w-full max-w-4xl flex items-center justify-between mb-6">
+        <div>
+          <p id="carousel-label" class="text-xs uppercase tracking-widest text-sage mb-1"></p>
+          <h3 id="carousel-title" class="font-serif text-2xl italic text-white"></h3>
+        </div>
+        <button onclick="closeCarousel()" class="text-white/60 hover:text-white transition-colors p-2" aria-label="Close">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Image + Arrows -->
+      <div class="w-full max-w-4xl flex items-center gap-6">
+        <button onclick="prevImage()" class="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-white/30 text-white hover:border-white hover:bg-white/10 transition-all" aria-label="Previous image">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+
+        <div class="flex-1 aspect-[4/3] bg-charcoal overflow-hidden">
+          <img id="carousel-img" src="" alt="" class="w-full h-full object-cover transition-opacity duration-300">
+        </div>
+
+        <button onclick="nextImage()" class="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-white/30 text-white hover:border-white hover:bg-white/10 transition-all" aria-label="Next image">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Counter -->
+      <p id="carousel-counter" class="mt-5 text-white/50 text-sm tracking-widest"></p>
+    </div>
+  </div>
+
   <!-- libraries -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -498,6 +534,178 @@
         navbar.classList.remove('shadow-md');
       }
     });
+
+    // Carousel
+    const carousel_projects = {
+      'north-dakota': {
+        title: 'North Dakota Residence',
+        label: 'New Build',
+        images: [
+          'assets/project_pictures/2494 River_s Bend Dr E_015.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_020.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_021.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_023.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_026.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_028.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_031.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_034.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_037.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_040.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_041.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_043.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_046.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_051.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_055.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_056.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_057.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_059.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_062.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_063.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_066.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_067.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_068.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_070.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_072.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_077.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_078.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_080.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_086.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_087.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_089.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_093.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_099.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_103.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_107.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_109.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_110.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_116.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_117.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_119.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_120.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_122.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_124.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_125.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_127.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_128.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_130.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_131.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_139.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_141.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_143.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_145.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_147.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_148.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_150.jpg',
+          'assets/project_pictures/2494 River_s Bend Dr E_154.jpg',
+        ]
+      },
+      'minneapolis-parkway': {
+        title: 'Minneapolis Parkway Residence',
+        label: 'Remodel',
+        images: [
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_002.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_003.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_004.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_006.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_007.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_009.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_013.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_015.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_019.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_020.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_022.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_027.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_033.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_034.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_036.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_041.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_043.jpg',
+          'assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_050.jpg',
+        ]
+      },
+      'modern-family': {
+        title: 'Modern Family Residence',
+        label: 'New Build',
+        images: [
+          'assets/project_pictures/Abbott_Ave_S_001.jpg',
+          'assets/project_pictures/Abbott_Ave_S_002.jpg',
+          'assets/project_pictures/Abbott_Ave_S_003.jpg',
+          'assets/project_pictures/Abbott_Ave_S_004.jpg',
+          'assets/project_pictures/Abbott_Ave_S_005.jpg',
+          'assets/project_pictures/Abbott_Ave_S_006.jpg',
+          'assets/project_pictures/Abbott_Ave_S_007.jpg',
+          'assets/project_pictures/Abbott_Ave_S_008.jpg',
+          'assets/project_pictures/Abbott_Ave_S_009.jpg',
+          'assets/project_pictures/Abbott_Ave_S_010.jpg',
+          'assets/project_pictures/Abbott_Ave_S_011.jpg',
+          'assets/project_pictures/Abbott_Ave_S_012.jpg',
+          'assets/project_pictures/Abbott_Ave_S_013.jpg',
+          'assets/project_pictures/Abbott_Ave_S_014.jpg',
+          'assets/project_pictures/Abbott_Ave_S_017.jpg',
+          'assets/project_pictures/Abbott_Ave_S_018.jpg',
+          'assets/project_pictures/Abbott_Ave_S_019.jpg',
+          'assets/project_pictures/Abbott_Ave_S_021.jpg',
+          'assets/project_pictures/Abbott_Ave_S_022.jpg',
+          'assets/project_pictures/Abbott_Ave_S_023.jpg',
+        ]
+      }
+    }
+
+    let carousel_current_project = null
+    let carousel_index = 0
+
+    function openCarousel(project_key) {
+      const project = carousel_projects[project_key]
+      if(!project) return
+      carousel_current_project = project
+      carousel_index = 0
+      document.getElementById('carousel-title').textContent = project.title
+      document.getElementById('carousel-label').textContent = project.label
+      updateCarouselImage()
+      const modal = document.getElementById('carousel-modal')
+      modal.classList.remove('hidden')
+      document.body.style.overflow = 'hidden'
+      lucide.createIcons()
+    }
+
+    function closeCarousel() {
+      document.getElementById('carousel-modal').classList.add('hidden')
+      document.body.style.overflow = ''
+      carousel_current_project = null
+    }
+
+    function updateCarouselImage() {
+      const img = document.getElementById('carousel-img')
+      const counter = document.getElementById('carousel-counter')
+      const images = carousel_current_project.images
+      img.style.opacity = '0'
+      setTimeout(() => {
+        img.src = images[carousel_index]
+        img.alt = carousel_current_project.title + ' — image ' + (carousel_index + 1)
+        img.style.opacity = '1'
+      }, 150)
+      counter.textContent = (carousel_index + 1) + ' / ' + images.length
+    }
+
+    function prevImage() {
+      const len = carousel_current_project.images.length
+      carousel_index = (carousel_index - 1 + len) % len
+      updateCarouselImage()
+    }
+
+    function nextImage() {
+      const len = carousel_current_project.images.length
+      carousel_index = (carousel_index + 1) % len
+      updateCarouselImage()
+    }
+
+    // Keyboard navigation for carousel
+    document.addEventListener('keydown', (e) => {
+      if(!carousel_current_project) return
+      if(e.key === 'ArrowRight') nextImage()
+      if(e.key === 'ArrowLeft') prevImage()
+      if(e.key === 'Escape') closeCarousel()
+    })
   </script>
 </body>
 
