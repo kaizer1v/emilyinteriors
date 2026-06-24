@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emily Interiors | Classic interiors, beautifully lived in</title>
+  <title>Emily Anderson Interiors | Timeless Spaces, Designed for Real Life</title>
+  <meta name="description" content="Emily Anderson Interiors — classic interiors, beautifully lived in. Timeless residential design in Minneapolis, MN.">
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -64,24 +65,6 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
-    .dropdown-menu {
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.3s ease;
-    }
-
-    .dropdown:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .gallery-item {
-      break-inside: avoid;
-      margin-bottom: 1.5rem;
-    }
-
     .testimonial-card {
       background: linear-gradient(135deg, #FAF9F6 0%, #F5F0E8 100%);
     }
@@ -105,37 +88,15 @@
 
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center space-x-8">
-          <!-- Work Dropdown -->
-           <a href="#work" class="text-sm uppercase tracking-widest hover:text-sage transition-colors">
+          <a href="#work" class="text-sm uppercase tracking-widest hover:text-sage transition-colors">
             Portfolio
           </a>
-          <!-- <div class="dropdown relative">
-            <button
-              class="text-sm uppercase tracking-widest hover:text-sage transition-colors py-2 flex items-center gap-1">
-              Portfolio
-              <i data-lucide="chevron-down" class="w-4 h-4"></i>
-            </button>
-            <div
-              class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-sm border border-stone-100 py-2">
-              <a href="#work" onclick="filterWork('furnishing')"
-                class="block px-4 py-2 text-sm hover:bg-cream hover:text-sage transition-colors">
-                Furnishing
-              </a>
-              <a href="#work" onclick="filterWork('styling')"
-                class="block px-4 py-2 text-sm hover:bg-cream hover:text-sage transition-colors">
-                Styling
-              </a>
-            </div>
-          </div> -->
 
           <a href="#meet-emily" class="text-sm uppercase tracking-widest hover:text-sage transition-colors">
             About
           </a>
-          <a href="#gallery" class="text-sm uppercase tracking-widest hover:text-sage transition-colors">
+          <a href="#how-we-work" class="text-sm uppercase tracking-widest hover:text-sage transition-colors">
             How We Work
-          </a>
-          <a href="#testimonials" class="text-sm uppercase tracking-widest hover:text-sage transition-colors">
-            Testimonials
           </a>
           <a href="#contact"
             class="text-sm uppercase tracking-widest px-6 py-3 border border-charcoal hover:bg-charcoal hover:text-white transition-all duration-300">
@@ -155,25 +116,12 @@
     <!-- Mobile Menu -->
     <div class="md:hidden hidden bg-warm-white border-t border-stone-200" id="mobile-menu">
       <div class="px-4 pt-2 pb-6 space-y-1">
-        <div class="py-2">
-          <button onclick="toggleMobileWork()"
-            class="w-full text-left text-sm uppercase tracking-widest py-2 flex justify-between items-center">
-            Work
-            <i data-lucide="chevron-down" class="w-4 h-4"></i>
-          </button>
-          <div class="hidden pl-4 space-y-2 py-2" id="mobile-work-submenu">
-            <a href="#work" onclick="filterWork('furnishing'); toggleMobileMenu()"
-              class="block text-sm text-warm-gray hover:text-sage">Furnishing</a>
-            <a href="#work" onclick="filterWork('styling'); toggleMobileMenu()"
-              class="block text-sm text-warm-gray hover:text-sage">Styling</a>
-          </div>
-        </div>
+        <a href="#work" onclick="toggleMobileMenu()"
+          class="block text-sm uppercase tracking-widest py-2 hover:text-sage">Portfolio</a>
         <a href="#meet-emily" onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-widest py-2 hover:text-sage">About</a>
-        <a href="#gallery" onclick="toggleMobileMenu()"
+        <a href="#how-we-work" onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-widest py-2 hover:text-sage">How We Work</a>
-        <a href="#testimonials" onclick="toggleMobileMenu()"
-          class="block text-sm uppercase tracking-widest py-2 hover:text-sage">Testimonials</a>
         <a href="#contact" onclick="toggleMobileMenu()"
           class="block text-sm uppercase tracking-widest py-2 text-sage font-medium">Contact Us</a>
       </div>
@@ -183,13 +131,12 @@
   <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-      <img src="https://static.photos/interior/1200x630/1" alt="Luxury Interior"
+      <img src="assets/project_pictures/background image for web1.jpg" alt="Interior design by Emily Anderson Interiors"
         class="w-full h-full object-cover opacity-90">
       <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
     </div>
 
     <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto fade-in">
-      <p class="text-sm md:text-base uppercase tracking-[0.3em] mb-4 opacity-90">Classic interiors, beautifully lived in</p>
       <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-tight mb-6 italic">
         Timeless spaces,<br>designed for real life
       </h1>
@@ -211,110 +158,59 @@
   <section id="work" class="py-24 md:py-32 bg-warm-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-sm uppercase tracking-widest text-sage mb-3">Our Services</p>
         <h2 class="font-serif text-4xl md:text-5xl font-light mb-6">Work</h2>
         <p class="text-lg mb-8">We believe that exceptional design transcends trends. Our approach combines timeless aesthetics with contemporary sensibilities, creating spaces that reflect your unique story while standing the test of time.</p>
         <div class="w-24 h-px bg-charcoal mx-auto mb-8"></div>
-
-        <!-- Filter Buttons -->
-        <!-- <div class="flex justify-center gap-4 mb-12">
-          <button onclick="filterWork('all')"
-            class="work-filter active px-6 py-2 text-sm uppercase tracking-widest border border-charcoal bg-charcoal text-white transition-all"
-            data-filter="all">
-            All
-          </button>
-          <button onclick="filterWork('furnishing')"
-            class="work-filter px-6 py-2 text-sm uppercase tracking-widest border border-charcoal hover:bg-charcoal hover:text-white transition-all"
-            data-filter="furnishing">
-            Furnishing
-          </button>
-          <button onclick="filterWork('styling')"
-            class="work-filter px-6 py-2 text-sm uppercase tracking-widest border border-charcoal hover:bg-charcoal hover:text-white transition-all"
-            data-filter="styling">
-            Styling
-          </button>
-        </div>
-      </div> -->
+      </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="work-grid">
-        <!-- Furnishing Projects -->
-        <div class="work-item furnishing group cursor-pointer">
+
+        <!-- North Dakota Residence -->
+        <div class="work-item group cursor-pointer">
           <div class="relative overflow-hidden aspect-[4/5] hover-lift">
-            <img src="https://static.photos/living/640x800/101" alt="Furnishing Project"
+            <img src="assets/project_pictures/2494 River_s Bend Dr E_015.jpg" alt="North Dakota Residence"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 text-charcoal text-xs uppercase tracking-widest">New Build</span>
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
             <div
-              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white font-serif text-2xl italic">Manhattan Loft</p>
-              <p class="text-white/80 text-sm uppercase tracking-wider">Furnishing</p>
+              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/80 via-black/60 to-transparent">
+              <p class="text-white font-serif text-2xl italic mb-2">North Dakota Residence</p>
+              <p class="text-white/80 text-sm leading-relaxed">Designed for modern family living, this newly built home balances timeless style with everyday functionality. Thoughtfully planned spaces, warm finishes, and clean architectural details create an environment that feels both current and inviting. The design embraces a relaxed sophistication—beautiful without being overly formal—while prioritizing comfort, durability, and ease of living. From gathering spaces designed for connection to practical solutions that support daily routines, every element was selected to create a home that will evolve gracefully alongside its family for years to come.</p>
             </div>
           </div>
         </div>
 
-        <div class="work-item styling group cursor-pointer">
+        <!-- Minneapolis Parkway Residence -->
+        <div class="work-item group cursor-pointer">
           <div class="relative overflow-hidden aspect-[4/5] hover-lift">
-            <img src="https://static.photos/workspace/640x800/102" alt="Styling Project"
+            <img src="assets/project_pictures/O_hara Interiors_MDS Remodeling_Dean Parkway_002.jpg" alt="Minneapolis Parkway Residence"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 text-charcoal text-xs uppercase tracking-widest">Remodel</span>
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
             <div
-              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white font-serif text-2xl italic">Brooklyn Heights</p>
-              <p class="text-white/80 text-sm uppercase tracking-wider">Styling</p>
+              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/80 via-black/60 to-transparent">
+              <p class="text-white font-serif text-2xl italic mb-2">Minneapolis Parkway Residence</p>
+              <p class="text-white/80 text-sm leading-relaxed">This Minneapolis Spanish Revival was reimagined with a deep respect for its historic character and architectural integrity. The renovation focused on restoring a sense of timelessness to the main level, embracing classic forms, rich materials, and understated elegance. Every detail was selected to complement the home's original architecture, creating spaces that feel collected, welcoming, and enduring. The finished home strikes a balance between refinement and comfort, proving that thoughtful updates can enhance modern living while preserving the spirit of a historic residence. The result is a sophisticated retreat that feels as though it has always belonged.</p>
+              <p class="text-white/50 text-xs mt-3">MDS Remodeling · Photography: Spacecrafting · Work performed under O'Hara Interiors</p>
             </div>
           </div>
         </div>
 
-        <div class="work-item furnishing group cursor-pointer">
+        <!-- Modern Family Residence -->
+        <div class="work-item group cursor-pointer">
           <div class="relative overflow-hidden aspect-[4/5] hover-lift">
-            <img src="https://static.photos/bedroom/640x800/103" alt="Furnishing Project"
+            <img src="assets/project_pictures/Abbott_Ave_S_001.jpg" alt="Modern Family Residence"
               class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <span class="absolute top-4 left-4 px-3 py-1 bg-white/90 text-charcoal text-xs uppercase tracking-widest">New Build</span>
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
             <div
-              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white font-serif text-2xl italic">Hamptons Estate</p>
-              <p class="text-white/80 text-sm uppercase tracking-wider">Furnishing</p>
+              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/80 via-black/60 to-transparent">
+              <p class="text-white font-serif text-2xl italic mb-2">Modern Family Residence</p>
+              <p class="text-white/80 text-sm leading-relaxed">Located just steps from one of Minneapolis' beloved lakes, this custom new construction home was designed to balance modern aesthetics with the practical needs of everyday family life. Clean architectural lines, warm materials, and expansive windows create a bright, inviting environment that seamlessly connects the interior to the outdoor living spaces, including a resort-inspired pool and terrace. Thoughtful planning was central to the home's design, with distinct zones that provide both connection and privacy. A dedicated owner's wing serves as a peaceful retreat, while separate family spaces offer room for gathering, recreation, and daily routines. The result is a modern, highly functional home that feels equally suited for entertaining, relaxation, and life as it evolves over the years.</p>
             </div>
           </div>
         </div>
 
-        <div class="work-item styling group cursor-pointer">
-          <div class="relative overflow-hidden aspect-[4/5] hover-lift">
-            <img src="https://static.photos/indoor/640x800/104" alt="Styling Project"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-            <div
-              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white font-serif text-2xl italic">West Village Townhouse</p>
-              <p class="text-white/80 text-sm uppercase tracking-wider">Styling</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="work-item furnishing group cursor-pointer">
-          <div class="relative overflow-hidden aspect-[4/5] hover-lift">
-            <img src="https://static.photos/restaurant/640x800/105" alt="Furnishing Project"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-            <div
-              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white font-serif text-2xl italic">Tribeca Penthouse</p>
-              <p class="text-white/80 text-sm uppercase tracking-wider">Furnishing</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="work-item styling group cursor-pointer">
-          <div class="relative overflow-hidden aspect-[4/5] hover-lift">
-            <img src="https://static.photos/studio/640x800/106" alt="Styling Project"
-              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-            <div
-              class="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-gradient-to-t from-black/60 to-transparent">
-              <p class="text-white font-serif text-2xl italic">Upper East Side</p>
-              <p class="text-white/80 text-sm uppercase tracking-wider">Styling</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -329,19 +225,29 @@
           <div class="w-24 h-px bg-charcoal mb-8"></div>
 
           <div class="space-y-6 text-warm-gray leading-relaxed">
-            <p class="text-lg">
-              With over a decade of experience in luxury interior design, Emily brings a refined eye and personalized
-              approach to every project. Her philosophy centers on creating spaces that are both beautiful and deeply
-              livable.
+            <p class="text-lg text-charcoal font-medium">
+              At Emily Anderson Interiors, we believe the most beautiful homes are the ones truly lived in. Our work focuses on creating timeless spaces that feel classic, comfortable, and thoughtfully designed for everyday life.
             </p>
             <p>
-              After studying at the Parsons School of Design and apprenticing under renowned designers in Paris and
-              Milan, Emily founded Emily Interiors with a mission to transform houses into homes that tell their owners'
-              unique stories.
+              Emily Anderson is the founder and principal designer of Emily Anderson Interiors. With over 15 years of experience in residential interior design, Emily is known for creating interiors that balance beauty with livability—homes that feel refined, welcoming, and designed to stand the test of time.
             </p>
             <p>
-              Whether working on a complete furnishing project or refreshing a space through styling, Emily believes in
-              the power of thoughtful details—perfect lighting, curated textures, and meaningful objects that spark joy.
+              Emily began her career with one of Minneapolis's leading high-end residential design firms, where she spent 15 years collaborating on custom homes and renovations throughout the Twin Cities. During that time, she developed her signature approach: classic interiors that prioritize thoughtful layouts, enduring materials, and spaces that function beautifully for the families who live in them.
+            </p>
+            <p>
+              Emily's appreciation for homes began early. She grew up in South Minneapolis in a 1930s Tudor, where she developed a deep love for the character and craftsmanship of older houses. Her family owns Ace Hardware stores, and working there throughout her childhood gave her an early familiarity with the materials and practical details that make homes both functional and lasting.
+            </p>
+            <p>
+              Emily holds NCIDQ Certification, the industry's leading professional credential for interior designers, reflecting her expertise in design, building systems and professional practice.
+            </p>
+            <p>
+              Today Emily lives in Lakeville, Minnesota with her three young children. As both a designer and a homeowner, she understands how important it is for spaces to support the rhythms of everyday life—from busy kitchens to comfortable gathering spaces for family and friends.
+            </p>
+            <p>
+              Known for her collaborative spirit and kindness, Emily works closely with clients, architects, builders, and remodelers to create a process that feels thoughtful and flexible. She believes the best projects come from strong partnerships and a shared vision for the home.
+            </p>
+            <p>
+              The goal of every project is simple: classic interiors, beautifully lived in—timeless spaces designed for real life.
             </p>
           </div>
 
@@ -349,8 +255,8 @@
             <img src="assets/EmilyAndersonE(48of146).jpg" alt="Emily Signature"
               class="w-24 h-24 rounded-full object-cover grayscale">
             <div>
-              <p class="font-serif text-2xl italic text-charcoal">Emily Rose</p>
-              <p class="text-sm uppercase tracking-widest text-warm-gray">Principal Designer</p>
+              <p class="font-serif text-2xl italic text-charcoal">Emily Anderson</p>
+              <p class="text-sm uppercase tracking-widest text-warm-gray">Award-Winning Interior Designer</p>
             </div>
           </div>
         </div>
@@ -360,9 +266,8 @@
             <img src="assets/EmilyAndersonE(2of146).jpg" alt="Emily Portrait"
               class="w-full h-full object-cover hover-lift">
           </div>
-          <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-lg max-w-xs hidden md:block">
-            <p class="font-serif text-xl italic text-charcoal">"Design is not just what it looks like. It's how it makes
-              you feel."</p>
+          <div class="absolute -bottom-6 -left-6 bg-white p-6 shadow-lg max-w-sm hidden md:block">
+            <p class="font-serif text-lg italic text-charcoal">"Timeless design isn't about following trends. It's about creating a home that feels right for you, year after year." — Emily Anderson</p>
           </div>
         </div>
       </div>
@@ -370,67 +275,39 @@
   </section>
 
   <!-- How We Work Section -->
-  <section id="gallery" class="py-24 md:py-32 bg-warm-white">
+  <section id="how-we-work" class="py-24 md:py-32 bg-warm-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="text-sm uppercase tracking-widest text-sage mb-3">Portfolio</p>
+        <p class="text-sm uppercase tracking-widest text-sage mb-3">Our Process</p>
         <h2 class="font-serif text-4xl md:text-5xl font-light mb-6">How We Work</h2>
         <div class="w-24 h-px bg-charcoal mx-auto"></div>
       </div>
 
-      <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-        <div class="gallery-item relative group overflow-hidden">
-          <img src="https://static.photos/living/640x800/301" alt="Gallery 1"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
-          <div
-            class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span class="text-white font-serif text-2xl italic">The Madison Residence</span>
-          </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div class="text-center px-4 py-8 border-t-2 border-sage">
+          <p class="font-serif text-5xl font-light text-sage mb-4">01</p>
+          <h3 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-3">Discovery</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">We begin with understanding your vision, lifestyle, and functional needs</p>
         </div>
-
-        <div class="gallery-item relative group overflow-hidden">
-          <img src="https://static.photos/kitchen/640x480/302" alt="Gallery 2"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
-          <div
-            class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span class="text-white font-serif text-2xl italic">Soho Loft Kitchen</span>
-          </div>
+        <div class="text-center px-4 py-8 border-t-2 border-sage">
+          <p class="font-serif text-5xl font-light text-sage mb-4">02</p>
+          <h3 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-3">Concept</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Design proposals that bring your vision to life</p>
         </div>
-
-        <div class="gallery-item relative group overflow-hidden">
-          <img src="https://static.photos/bedroom/640x800/303" alt="Gallery 3"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
-          <div
-            class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span class="text-white font-serif text-2xl italic">Central Park West</span>
-          </div>
+        <div class="text-center px-4 py-8 border-t-2 border-sage">
+          <p class="font-serif text-5xl font-light text-sage mb-4">03</p>
+          <h3 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-3">Development</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Detailed plans, specifications, and material selections</p>
         </div>
-
-        <div class="gallery-item relative group overflow-hidden">
-          <img src="https://static.photos/office/640x640/304" alt="Gallery 4"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
-          <div
-            class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span class="text-white font-serif text-2xl italic">Chelsea Home Office</span>
-          </div>
+        <div class="text-center px-4 py-8 border-t-2 border-sage">
+          <p class="font-serif text-5xl font-light text-sage mb-4">04</p>
+          <h3 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-3">Procurement</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Sourcing and coordinating furniture, fixtures, and finishes</p>
         </div>
-
-        <div class="gallery-item relative group overflow-hidden">
-          <img src="https://static.photos/dining/640x800/305" alt="Gallery 5"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
-          <div
-            class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span class="text-white font-serif text-2xl italic">Park Avenue Dining</span>
-          </div>
-        </div>
-
-        <div class="gallery-item relative group overflow-hidden">
-          <img src="https://static.photos/bathroom/640x480/306" alt="Gallery 6"
-            class="w-full h-auto transition-transform duration-500 group-hover:scale-105">
-          <div
-            class="absolute inset-0 bg-charcoal/0 group-hover:bg-charcoal/30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-            <span class="text-white font-serif text-2xl italic">Nolita Spa Bath</span>
-          </div>
+        <div class="text-center px-4 py-8 border-t-2 border-sage">
+          <p class="font-serif text-5xl font-light text-sage mb-4">05</p>
+          <h3 class="text-sm uppercase tracking-widest font-medium text-charcoal mb-3">Installation</h3>
+          <p class="text-warm-gray text-sm leading-relaxed">Bringing it all together with meticulous attention to detail</p>
         </div>
       </div>
     </div>
@@ -449,63 +326,22 @@
         <div class="testimonial-card p-8 md:p-10 text-charcoal">
           <i data-lucide="quote" class="w-8 h-8 text-sage mb-4"></i>
           <p class="font-serif text-xl md:text-2xl italic leading-relaxed mb-6">
-            "Emily has been such a joy to work with. Even though I gave her a difficult task of a blank slate— with limited experience in interior design myself —she managed to perfectly discern my tastes and present beautiful interpretations. I couldn’t be happier with her work.  On top of her professional results, she is also so pleasant and easy to collaborate with"
+            "Emily has been such a joy to work with. Even though I gave her a difficult task of a blank slate— with limited experience in interior design myself —she managed to perfectly discern my tastes and present beautiful interpretations. I couldn’t be happier with her work. On top of her professional results, she is also so pleasant and easy to collaborate with."
           </p>
-          <div class="flex items-center gap-4">
-            <img src="https://static.photos/people/100x100/401" alt="Client"
-              class="w-12 h-12 rounded-full object-cover grayscale">
-            <div>
-              <p class="font-medium text-charcoal">John M</p>
-              <p class="text-sm text-warm-gray">Upper West Side, NY</p>
-            </div>
+          <div>
+            <p class="font-medium text-charcoal">John M.</p>
+            <p class="text-sm text-warm-gray">West Suburbs</p>
           </div>
         </div>
 
         <div class="testimonial-card p-8 md:p-10 text-charcoal">
           <i data-lucide="quote" class="w-8 h-8 text-sage mb-4"></i>
           <p class="font-serif text-xl md:text-2xl italic leading-relaxed mb-6">
-            "Working with Emily was a dream. She respected our budget while delivering a space that looks like a million
-            bucks. The styling session alone was worth every penny."
+            "For more than a decade, I’ve worked with Emily on multiple projects, including a new build, and the results have always been exceptional. Her creativity, attention to detail and confident decision making have made my projects run smoothly and turn out beautifully. She has a wonderful talent for understanding my vision and presenting options within my budget."
           </p>
-          <div class="flex items-center gap-4">
-            <img src="https://static.photos/people/100x100/402" alt="Client"
-              class="w-12 h-12 rounded-full object-cover grayscale">
-            <div>
-              <p class="font-medium text-charcoal">Alexandra Chen</p>
-              <p class="text-sm text-warm-gray">Williamsburg, Brooklyn</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card p-8 md:p-10 text-charcoal">
-          <i data-lucide="quote" class="w-8 h-8 text-sage mb-4"></i>
-          <p class="font-serif text-xl md:text-2xl italic leading-relaxed mb-6">
-            "The furnishing process was seamless from start to finish. Emily's connections and taste level are
-            unmatched. Our home has never felt more 'us'."
-          </p>
-          <div class="flex items-center gap-4">
-            <img src="https://static.photos/people/100x100/403" alt="Client"
-              class="w-12 h-12 rounded-full object-cover grayscale">
-            <div>
-              <p class="font-medium text-charcoal">The Hartley Family</p>
-              <p class="text-sm text-warm-gray">Greenwich, CT</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card p-8 md:p-10 text-charcoal">
-          <i data-lucide="quote" class="w-8 h-8 text-sage mb-4"></i>
-          <p class="font-serif text-xl md:text-2xl italic leading-relaxed mb-6">
-            "Emily has an extraordinary gift for blending vintage finds with contemporary pieces. Our space feels
-            curated, not decorated. We couldn't be happier."
-          </p>
-          <div class="flex items-center gap-4">
-            <img src="https://static.photos/people/100x100/404" alt="Client"
-              class="w-12 h-12 rounded-full object-cover grayscale">
-            <div>
-              <p class="font-medium text-charcoal">Marcus & Olivia Reed</p>
-              <p class="text-sm text-warm-gray">SoHo, Manhattan</p>
-            </div>
+          <div>
+            <p class="font-medium text-charcoal">Michelle T.</p>
+            <p class="text-sm text-warm-gray">Twin Cities</p>
           </div>
         </div>
       </div>
@@ -518,12 +354,12 @@
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div>
           <p class="text-sm uppercase tracking-widest text-sage mb-4">Get In Touch</p>
-          <h2 class="font-serif text-4xl md:text-5xl font-light mb-6">Contact Us</h2>
+          <h2 class="font-serif text-4xl md:text-5xl font-light mb-2">Contact Us</h2>
+          <p class="font-serif text-xl italic text-warm-gray mb-6">Thoughtful Design Starts Here</p>
           <div class="w-24 h-px bg-charcoal mb-8"></div>
 
           <p class="text-warm-gray leading-relaxed mb-10 text-lg">
-            Ready to transform your space? We'd love to hear about your project. Whether you're looking for full
-            furnishing services or a styling refresh, let's start a conversation.
+            Every project begins with an in-home consultation. During this meeting, we'll walk through your space, discuss your goals, and talk through any challenges you're facing. Whether you're planning a new build, remodel, furnishings project, or simply need design guidance, this is an opportunity for us to get to know each other and determine the best path forward. Consultations are approximately 1–2 hours and are billed at a flat rate of $300.
           </p>
 
           <div class="space-y-6">
@@ -531,7 +367,7 @@
               <i data-lucide="map-pin" class="w-5 h-5 text-sage mt-1"></i>
               <div>
                 <p class="font-medium text-charcoal">Studio</p>
-                <p class="text-warm-gray">245 Lafayette Street, Suite 4B<br>New York, NY 10012</p>
+                <p class="text-warm-gray">Minneapolis, MN</p>
               </div>
             </div>
 
@@ -539,7 +375,7 @@
               <i data-lucide="mail" class="w-5 h-5 text-sage mt-1"></i>
               <div>
                 <p class="font-medium text-charcoal">Email</p>
-                <p class="text-warm-gray">hello@emilyinteriors.com</p>
+                <a href="mailto:Hello@emilyainteriors.com" class="text-warm-gray hover:text-sage transition-colors">Hello@emilyainteriors.com</a>
               </div>
             </div>
 
@@ -547,31 +383,21 @@
               <i data-lucide="phone" class="w-5 h-5 text-sage mt-1"></i>
               <div>
                 <p class="font-medium text-charcoal">Phone</p>
-                <p class="text-warm-gray">(212) 555-0147</p>
+                <a href="tel:6128161036" class="text-warm-gray hover:text-sage transition-colors">612-816-1036</a>
               </div>
             </div>
           </div>
 
-          <div class="mt-10 flex gap-4">
-            <a href="#"
-              class="w-10 h-10 flex items-center justify-center hover:bg-white hover:text-white transition-all">
-              <img src="instagram.svg" alt="Instagram" class="w-5 h-5">
-            </a>
-            <!-- <a href="#"
-              class="w-10 h-10 flex items-center justify-center hover:bg-white hover:text-white transition-all">
-              <i data-lucide="linkedin" class="w-5 h-5"></i>
-            </a> -->
-            <a href="#"
-              class="w-10 h-10 flex items-center justify-center hover:bg-white hover:text-white transition-all">
-              <img src="facebook.svg" alt="Facebook" class="w-5 h-5">
+          <div class="mt-10">
+            <a href="https://instagram.com/emilyainteriors" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-2 text-warm-gray hover:text-sage transition-colors text-sm">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+              @emilyainteriors
             </a>
           </div>
         </div>
 
         <div class="bg-white p-8 md:p-12 shadow-lg">
-          <p class="mb-6 text-warm-gray leading-relaxed">
-            Pricing note: Our first appointment fee is $300. We don't have a set hourly rate, but on average we charge $175/hr; we charge in blocks of time, usually starting with minimum 10 hours.
-          </p>
           <form onsubmit="handleSubmit(event)" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -599,10 +425,12 @@
               <label class="block text-sm uppercase tracking-wider text-charcoal mb-2">Project Type</label>
               <select
                 class="w-full px-4 py-3 border border-stone-200 focus:border-sage focus:outline-none transition-colors bg-warm-white text-warm-gray">
-                <option>Furnishing</option>
-                <option>Styling</option>
-                <option>Full Design</option>
-                <option>Consultation</option>
+                <option value="">Select a project type</option>
+                <option>New Build</option>
+                <option>Remodel</option>
+                <option>Furnishings</option>
+                <option>Design Guidance</option>
+                <option>Other</option>
               </select>
             </div>
 
@@ -626,12 +454,8 @@
   <!-- Footer -->
   <footer class="bg-charcoal text-white py-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-      <p class="font-serif text-2xl italic">Emily Interiors</p>
-      <p class="text-white/60 text-sm">&copy; 2024 Emily Interiors. All rights reserved.</p>
-      <div class="flex gap-6 text-sm text-white/60">
-        <a href="#" class="hover:text-white transition-colors">Privacy</a>
-        <a href="#" class="hover:text-white transition-colors">Terms</a>
-      </div>
+      <p class="font-serif text-2xl italic">Emily Anderson Interiors</p>
+      <p class="text-white/60 text-sm">&copy; 2025 Emily Anderson Interiors. All rights reserved.</p>
     </div>
   </footer>
 
@@ -658,46 +482,6 @@
       lucide.createIcons();
     }
 
-    // Mobile work submenu toggle
-    function toggleMobileWork() {
-      const submenu = document.getElementById('mobile-work-submenu');
-      submenu.classList.toggle('hidden');
-    }
-
-    // Work filter functionality
-    function filterWork(category) {
-      const items = document.querySelectorAll('.work-item');
-      const buttons = document.querySelectorAll('.work-filter');
-
-      // Update active button
-      buttons.forEach(btn => {
-        if (btn.dataset.filter === category) {
-          btn.classList.add('bg-charcoal', 'text-white');
-          btn.classList.remove('hover:bg-charcoal', 'hover:text-white');
-        } else {
-          btn.classList.remove('bg-charcoal', 'text-white');
-          btn.classList.add('hover:bg-charcoal', 'hover:text-white');
-        }
-      });
-
-      // Filter items with animation
-      items.forEach((item, index) => {
-        if (category === 'all' || item.classList.contains(category)) {
-          item.style.display = 'block';
-          setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-          }, index * 50);
-        } else {
-          item.style.opacity = '0';
-          item.style.transform = 'translateY(20px)';
-          setTimeout(() => {
-            item.style.display = 'none';
-          }, 300);
-        }
-      });
-    }
-
     // Form submission
     function handleSubmit(e) {
       e.preventDefault();
@@ -713,14 +497,6 @@
       } else {
         navbar.classList.remove('shadow-md');
       }
-    });
-
-    // Initialize all items visible
-    document.addEventListener('DOMContentLoaded', () => {
-      const items = document.querySelectorAll('.work-item');
-      items.forEach(item => {
-        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-      });
     });
   </script>
 </body>
