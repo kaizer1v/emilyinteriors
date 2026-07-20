@@ -20,11 +20,12 @@
       theme: {
         extend: {
           colors: {
+            'brand': '#7b8471',
             'warm-white': '#FAF9F6',
             'cream': '#F5F0E8',
             'charcoal': '#2C2C2C',
             'warm-gray': '#6B6B6B',
-            'sage': '#a6b8a7',
+            'sage': '#7b8471',
             'terracotta': '#C4A484'
           },
           fontFamily: {
@@ -364,6 +365,10 @@
             Every project begins with an in-home consultation. During this meeting, we'll walk through your space, discuss your goals, and talk through any challenges you're facing. Whether you're planning a new build, remodel, furnishings project, this is an opportunity for us to get to know each other and determine the best path forward. Consultations are approximately 1–2 hours and are billed at a flat rate of $300.
           </p>
 
+          
+        </div>
+        
+        <div class="bg-white p-8 md:p-12 shadow-lg">
           <div class="space-y-6">
             <div class="flex items-start gap-4">
               <i data-lucide="map-pin" class="w-5 h-5 text-sage mt-1"></i>
@@ -372,7 +377,7 @@
                 <p class="text-warm-gray">Minneapolis, MN</p>
               </div>
             </div>
-
+  
             <div class="flex items-start gap-4">
               <i data-lucide="mail" class="w-5 h-5 text-sage mt-1"></i>
               <div>
@@ -380,7 +385,7 @@
                 <a href="mailto:Hello@emilyainteriors.com" class="text-warm-gray hover:text-sage transition-colors">Hello@emilyainteriors.com</a>
               </div>
             </div>
-
+  
             <div class="flex items-start gap-4">
               <i data-lucide="phone" class="w-5 h-5 text-sage mt-1"></i>
               <div>
@@ -388,19 +393,16 @@
                 <a href="tel:6128161036" class="text-warm-gray hover:text-sage transition-colors">612-816-1036</a>
               </div>
             </div>
+  
+            <div class="mt-10">
+              <a href="https://instagram.com/emilyainteriors" target="_blank" rel="noopener noreferrer"
+                class="flex items-center gap-2 text-warm-gray hover:text-sage transition-colors">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                @emilyainteriors
+              </a>
+            </div>
           </div>
-
-          <div class="mt-10">
-            <a href="https://instagram.com/emilyainteriors" target="_blank" rel="noopener noreferrer"
-              class="flex items-center gap-2 text-warm-gray hover:text-sage transition-colors text-sm">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
-              @emilyainteriors
-            </a>
-          </div>
-        </div>
-
-        <div class="bg-white p-8 md:p-12 shadow-lg">
-          <form onsubmit="handleSubmit(event)" class="space-y-6">
+          <!-- <form onsubmit="handleSubmit(event)" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label class="block text-sm uppercase tracking-wider text-charcoal mb-2">First Name</label>
@@ -447,7 +449,7 @@
               class="w-full py-4 bg-charcoal text-white uppercase tracking-widest text-sm hover:bg-sage transition-colors duration-300">
               Send Message
             </button>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
